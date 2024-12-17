@@ -6,6 +6,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import VideoList from './comp/VideoList';
 import VideoPlayer from './comp/VideoPlayer';
 import UploadVideo from './comp/UploadForm';
+import ContactUs from './comp/studentform';
+import Students from './comp/studentslist';
+
 const App = () => {
     return (
         <Router>
@@ -13,6 +16,8 @@ const App = () => {
                 <Route path="/" element={<VideoList />} />
                 <Route path="/upload" element={<UploadVideo />} />
                 <Route path="/video/:id" element={<VideoPlayer />} />
+                <Route path="/join" element={<ContactUs />} />
+                <Route path="/students" element={<Students/>} />
             </Routes>
         </Router>
     );
