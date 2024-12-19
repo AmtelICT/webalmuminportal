@@ -60,6 +60,8 @@ body {
     margin-left: 8px;
 }
 
+
+
 /* Category Titles */
 .categorytitle {
     color: #ffffff;
@@ -68,7 +70,36 @@ body {
     line-height: 63px;
     margin-left: 5%;
     margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Add text shadow for better visibility */
+    text-align: center; /* Center align for small screens */
 }
+
+/* Responsive Category Titles */
+@media screen and (max-width: 768px) {
+    .categorytitle {
+        font-size: 24px; /* Slightly smaller for tablets */
+        line-height: 50px;
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 10px;
+        text-align: center; /* Center align */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .categorytitle {
+        font-size: 20px; /* Smaller font for phones */
+        line-height: 40px;
+        margin-bottom: 8px;
+        padding: 0 10px; /* Add padding for spacing on narrow screens */
+    }
+}
+
+
+
+
+
+
+
 
 /* Section for Videos */
 .section {
