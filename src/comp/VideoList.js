@@ -146,7 +146,7 @@ const VideoList = () => {
 
 
 
-              <text className='categorytitle'>  4 . Motion Graphics and Video Editting </text>
+              <text className='categorytitle'>  4 . Motion Graphics & Video </text>
            <div className='section'>
                     {videoedit.map((video) => (
                         <div key={video._id} onClick={() => handleClick(video)}>
@@ -159,7 +159,7 @@ const VideoList = () => {
             </div>
 
 
-            <text className='categorytitle'>  5 . Graphic Design and Photo Editting </text>
+            <text className='categorytitle'>  5 . Graphic Design & Photo  </text>
            <div className='section'>
                     {photoedit.map((video) => (
                         <div key={video._id} onClick={() => handleClick(video)}>
@@ -172,7 +172,7 @@ const VideoList = () => {
             </div>
 
 
-            <text className='categorytitle'>  6 .  Networking and Cloud Computing</text>
+            <text className='categorytitle'>  6 .  Networking & Cloud </text>
            <div className='section'>
                     {networking.map((video) => (
                         <div key={video._id} onClick={() => handleClick(video)}>
@@ -196,7 +196,7 @@ const VideoList = () => {
 
             </div>
 
-            <text className='categorytitle'>  8 . CyberSecurity and Ethical Hacking </text>
+            <text className='categorytitle'>  8 . CyberSecurity Course </text>
            <div className='section'>
                     {cybersec.map((video) => (
                         <div key={video._id} onClick={() => handleClick(video)}>
@@ -268,7 +268,7 @@ const VideoList = () => {
 
             </div>
 
-            <text className='categorytitle'>  14 . Digital Marketting and Social Media </text>
+            <text className='categorytitle'>  14 . Digital Marketting  </text>
            <div className='section'>
                     {arabic.map((video) => (
                         <div key={video._id} onClick={() => handleClick(video)}>
