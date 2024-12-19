@@ -9,18 +9,28 @@ body {
 .navbar {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 90%;
     padding: 10px 5%;
-    background-color: #f8f8f8; /* Optional navbar background */
+    background-color: #000000; /* Optional navbar background */
     align-items: center;
     justify-content: space-between;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+
+/* .logo{
+    color: #ffffff;
+    font-family: "Jacques Francois Shadow", serif;
+    font-size: 25px;
+    line-height: 63px;
+    margin-right: 2px;
+} */
+
 .searchbar {
     display: flex;
     flex-direction: row;
     flex-grow: 1;
+    width: 80%;
     background-color: #ffffff;
     height: 40px;
     border-radius: 8px;
@@ -33,6 +43,7 @@ body {
 
 .sinput {
     flex-grow: 1;
+    width: 80%;
     background-color: #ffffff;
     color: black;
     font-family: "Itim", cursive;

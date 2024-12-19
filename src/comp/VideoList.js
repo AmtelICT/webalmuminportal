@@ -88,6 +88,7 @@ const VideoList = () => {
                <div className='navbar'>
                          <div className='logodiv'>
                               {/* <img src='#g' alt='Almumin Digital Labs' className='logo' /> */}
+                              {/* <h3 className='logo' >Explore !!!!</h3> */}
                          </div>
 
                         <form  className='searchbar' >
