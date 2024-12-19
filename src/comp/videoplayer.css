@@ -1,29 +1,23 @@
-.body{
+.body {
     background-color: rgb(0, 0, 0);
-    display:flex;
+    display: flex;
     flex-direction: column;
-    
+    min-height: 100vh; /* Full viewport height */
+    justify-content: space-between; /* Ensures content is spread out evenly */
 }
 
-.videocont{
+.videocont {
+    height: 70%;
+}
 
-    height:70%
-
-} 
-
-
-.videoplayer{
+.videoplayer {
     width: 80%;
     align-items: center;
     margin-left: 10%;
-    margin-top: 30px
-
+    margin-top: 30px;
 }
 
-
-
-
-.videotitlein{
+.videotitlein {
     font-family: "Itim", cursive;
     text-transform: capitalize;
     font-style: normal;
@@ -34,35 +28,28 @@
     color: #FFFFFF;
 }
 
-
-
-
-.descriptionin{
+.descriptionin {
     font-family: "Jaini", system-ui;
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
     line-height: 38px;
     text-align: center;
-    word-wrap: break-word; /* Ensures long words break and wrap */
-    overflow-wrap: break-word; /* Modern property equivalent */
-    white-space: normal; 
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
     color: #d8d8d8;
-
 }
 
-
-
-.flexbot{
+.flexbot {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* margin: auto; */
-
+    width: 100%;
+    margin-top: 20px; /* To separate author and button */
 }
 
-.author{
-
+.author {
     font-family: "Itim", cursive;
     font-style: normal;
     font-weight: 400;
@@ -71,24 +58,24 @@
     text-align: center;
     color: #FFFFFF;
     margin-left: 10%;
-
+    order: 1; /* Ensure author comes first in mobile view */
 }
 
-.registerbtn{
-
+.registerbtn {
     background-color: #FF0000;
     border-radius: 25px;
     margin-right: 5%;
     display: flex;
     flex-direction: column;
-    
+    align-items: center;
+    padding: 10px 20px; /* Add padding for better button size */
 }
 
-.icongrad{
+.icongrad {
     align-self: center;
 }
 
-.register{
+.register {
     font-family: "Itim", cursive;
     font-style: normal;
     font-weight: 400;
@@ -96,12 +83,56 @@
     line-height: 18px;
     text-align: center;
     color: #FFFFFF;
-    word-wrap: break-word; /* Ensures long words break and wrap */
-    overflow-wrap: break-word; /* Modern property equivalent */
-    white-space: normal; 
-
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
 }
 
+/* Media Queries for Mobile Screens */
+@media (max-width: 768px) {
+    .flexbot {
+        flex-direction: column; /* Stack the author and button on mobile */
+        align-items: center;
+        justify-content: center;
+    }
 
+    .author {
+        margin-left: 0; /* Reset left margin for centering on mobile */
+        order: 0; /* Author comes first on mobile */
+    }
 
+    .registerbtn {
+        margin-right: 0;
+        margin-top: 15px; /* Add space between author and button */
+    }
 
+    .videoplayer {
+        width: 100%; /* Make the video player full width on mobile */
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .videotitlein {
+        font-size: 36px; /* Smaller title on mobile */
+    }
+
+    .descriptionin {
+        font-size: 18px; /* Smaller description on mobile */
+    }
+}
+
+/* Media Queries for Desktop Screens */
+@media (min-width: 769px) {
+    .flexbot {
+        flex-direction: row; /* Row layout on desktop */
+    }
+
+    .author {
+        margin-left: 0;
+        order: 0; /* Default order for desktop */
+    }
+
+    .registerbtn {
+        margin-top: 0;
+    }
+}

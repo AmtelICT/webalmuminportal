@@ -1,165 +1,181 @@
-.body{
+/* General Body Styling */
+body {
     background-color: azure;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-
-.navbar{
-  display:flex;
-  flex-direction: row;
-  width: 90%;
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px 5%;
+    background-color: #f8f8f8; /* Optional navbar background */
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* .logodiv{
-     height: 167px;
-     margin-left:5%
-}
-
-.logo{
-    height:2%
-} */
-.searchbar{
-   display: flex;
-   flex-direction: row;
-   width:60%;
-   background-color: #ffffff;
-   height : 45px;
-   margin-left: 20%;
-   margin-top: 30px;
-}
-.sicon{
-
-    margin-left: 1%;
-    color: #000000;
-    margin-right: 2%;
-    margin-top: 3px;
-    
-
-}
-.sinput{
+.searchbar {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
     background-color: #ffffff;
-    color:black;
+    height: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    align-items: center;
+    padding: 0 10px;
+    margin-left: 10px;
+}
+
+.sinput {
+    flex-grow: 1;
+    background-color: #ffffff;
+    color: black;
+    font-family: "Itim", cursive;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    height: 100%;
+}
+
+.sicon {
+    font-size: 18px;
+    color: #555;
+    margin-left: 8px;
+}
+
+/* Category Titles */
+.categorytitle {
+    color: #ffffff;
+    font-family: "Jacques Francois Shadow", serif;
+    font-size: 28px;
+    line-height: 63px;
+    margin-left: 5%;
+    margin-bottom: 15px;
+}
+
+/* Section for Videos */
+.section {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 10px; /* Space between images */
+    padding: 10px;
+}
+
+/* Video Images */
+.scroll-image {
+    flex: 0 0 auto;
+    height: 250px; /* Adjust height */
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 10px;
+}
+
+.scroll-image:hover {
+    transform: scale(1.1);
+}
+
+/* Video Titles */
+.vt, .videotitle {
     font-family: "Itim", cursive;
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
-    width:98%;
-    margin-right: 2%;
-    border-color: #FFFFFF;
-    border-right: 1px solid black;
-
-   
-
-
+    line-height: 1.4;
+    text-align: center;
+    word-wrap: break-word;
+    white-space: normal;
 }
 
-
-
-    .categorytitle{
-       color:aliceblue;
-       font-family: "Jacques Francois Shadow", serif;
-       font-weight: 400;
-       font-style: normal;
-       font-size: 28px;
-        line-height: 63px;
-         text-align: start;
-          color: #FFFFFF;
-          margin-left: 45px;
-          margin-bottom: 30px ;
-       
-  
-    }
-  
-  
-
-
-
-.section{
-    /* display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    scrollbar-width: 1;
-  */
-  display: flex;
-  flex-direction: row;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 10px; /* Space between images */
-  padding: 10px;
-   
+.vt {
+    color: rgb(255, 115, 0);
 }
 
+.videotitle {
+    color: aliceblue;
+}
 
-
-/* Container Styling */
-
-  /* Images Styling */
-  .scroll-image {
-    flex: 0 0 auto; /* Prevent shrinking */
-    height: 250px; /* Adjust height */
-    border-radius: 8px; /* Rounded corners */
-    object-fit: cover; /* Ensures image fits within bounds */
-    transition: transform 0.3s ease-in-out;
-    margin-left: 34px;
-  }
-  
-  /* Hover effect */
-  .scroll-image:hover {
-    transform: scale(1.1);
-  }
-  
-  /* Custom Scrollbar Styling */
-  .section::-webkit-scrollbar {
+/* Custom Scrollbar Styling */
+.section::-webkit-scrollbar {
     height: 8px; /* Height of the horizontal scrollbar */
-  }
-  
-  .section::-webkit-scrollbar-thumb {
+}
+
+.section::-webkit-scrollbar-thumb {
     background: #ccc; /* Thumb color */
-    border-radius: 4px; /* Rounded corners */
-  }
-  
-  .section::-webkit-scrollbar-thumb:hover {
+    border-radius: 4px;
+}
+
+.section::-webkit-scrollbar-thumb:hover {
     background: #888; /* Darker thumb on hover */
-  }
-  
-  .section::-webkit-scrollbar-track {
-    background: transparent; /* Transparent background */
-  }
-  
-  /* Fallback for non-Webkit browsers */
-  .section {
-    scrollbar-color: #333333 transparent; /* Thumb and track colors */
-    scrollbar-width: thin; /* Thin scrollbar */
-  }
-  
+}
 
-  .vt{
-    color:rgb(255, 115, 0);
-    font-family: "Itim", cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 28px;
-    line-height: 58px;
-    text-align: center;
+.section::-webkit-scrollbar-track {
+    background: transparent;
+}
 
-  }
-  
+.section {
+    scrollbar-color: #333333 transparent;
+    scrollbar-width: thin;
+}
 
-  .videotitle{
-    color:aliceblue;
-    font-family: "Itim", cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 28px;
-    line-height: 58px;
-    text-align: center;
-    word-wrap: break-word; /* Ensures long words break and wrap */
-    overflow-wrap: break-word; /* Modern property equivalent */
-    white-space: normal; 
-  }
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .searchbar {
+        height: 35px;
+    }
 
+    .sinput {
+        font-size: 12px;
+    }
 
+    .sicon {
+        font-size: 16px;
+    }
 
+    .scroll-image {
+        height: 200px; /* Reduce image height */
+    }
 
+    .vt, .videotitle {
+        font-size: 16px;
+    }
+}
 
+@media screen and (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px;
+    }
 
+    .searchbar {
+        width: 100%;
+        margin: 10px 0;
+    }
 
+    .sinput {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .sicon {
+        font-size: 14px;
+        margin-left: 5px;
+    }
+
+    .scroll-image {
+        height: 150px; /* Further reduce image height */
+    }
+
+    .vt, .videotitle {
+        font-size: 14px;
+    }
+}
