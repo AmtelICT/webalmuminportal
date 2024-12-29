@@ -270,7 +270,7 @@ const VideoList = () => {
 
             <text className='categorytitle'>  14 . Digital Marketting  </text>
            <div className='section'>
-                    {arabic.map((video) => (
+                    {digitalm.map((video) => (
                         <div key={video._id} onClick={() => handleClick(video)}>
                             <img src={`${video.bannerImage}`} alt={video.title}    className="scroll-image"/>
                             <h3 className='vt'> Course Title </h3>
